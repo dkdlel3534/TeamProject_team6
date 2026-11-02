@@ -21,7 +21,7 @@ public class BookDB
     /**
      * 책 등록번호 검사 메소드
      *
-     * @param  bookID(등록호번)
+     * @param  bookID(등록번호)
      * @return    boolean
      */
     public boolean check(String bookID)

@@ -11,7 +11,7 @@ public class NewLibMS
     private BookDB bookDB;
     private UserDB userDB;
     private LoanDB loanDB;
-    
+
     /**
      * 책을 빌리는 작업을 수행하는 메소드
      *
@@ -19,7 +19,7 @@ public class NewLibMS
      */
     public void borrowBook(String bookID, String stID)
     {
-          BookDB bookDB = new BookDB();
+        BookDB bookDB = new BookDB();
         UserDB userDB = new UserDB();
         LoanDB loanDB = new LoanDB();
 
@@ -54,7 +54,7 @@ public class NewLibMS
             loanDB.save(loan);
         }      
     }
-    
+
     /**
      * 새 책을 등록하는 메소드
      *
@@ -63,9 +63,25 @@ public class NewLibMS
      */
     public void registerNewBook(String bookID, String title, String author)
     {
+        BookDB bookDB = new BookDB();
 
+        boolean resultBook = bookDB.check(bookID);
+
+        if (resultBook == true) {
+            System.out.println("이미 등록된 책입니다!");
+            return;
+        }
+
+        else{
+
+            Book book = new Book(title, author, bookID);
+
+            bookDB.save(book);
+
+            book.display();
+        }
     }
-    
+
     /**
      * 새 이용자를 등록하는 메소드.
      *
@@ -73,6 +89,20 @@ public class NewLibMS
      */
     public void registerNewBorrower(String stID, String name)
     {
+        UserDB userDB = new UserDB();
 
+        boolean resultUserID = userDB.check(stID);
+
+        if (resultUserID == true) {
+            System.out.println("이미 등록된 이용자입니다!");
+            return;
+        }
+
+        else{User user = new User(stID, name);
+
+            userDB.save(user);
+
+            user.display();
+        }
     }
 }

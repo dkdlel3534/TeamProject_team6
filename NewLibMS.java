@@ -7,6 +7,7 @@
  */
 public class NewLibMS
 {
+    private String name;
     private BookDB bookDB;
     private UserDB userDB;
     private LoanDB loanDB;
@@ -61,6 +62,16 @@ public class NewLibMS
      * 
      */
     public void registerNewBook(String bookID, String title, String author)
+    {
+
+    }
+    
+    /**
+     * 새 이용자를 등록하는 메소드.
+     *
+     * @param  stID(학번), name(이름)
+     */
+    public void registerNewBorrower(String stID, String name)
     {
 
     }

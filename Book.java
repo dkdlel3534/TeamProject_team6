@@ -7,7 +7,7 @@
  */
 public class Book
 {
-    private String bookID;
+    private String title;
     private String author;
     private String bookID;
     

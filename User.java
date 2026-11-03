@@ -7,16 +7,7 @@
  */
 public class User
 {
-    private String name;
     private String stID;
-
-    /**
-     * User 클래스의 객체 생성자
-     */
-    public User(String stID, String name)
-    {
-        
-    }
 
     /**
      * 화면 출력 메소드
@@ -24,5 +15,15 @@ public class User
     public void display()
     {
 
+    }
+    
+    /**
+     * 대출가능한 이용자인지 여부를 체크하는 메소드
+     * 
+     * @return      boolean(대출가능여부)
+     */
+    public boolean check()
+    {
+        
     }
 }

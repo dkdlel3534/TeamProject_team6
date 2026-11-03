@@ -3,7 +3,7 @@
  * 도서관관리시스템 클래스
  *
  * @author (2025320070 복창희)
- * @version (2026.11.02)
+ * @version (2026.11.03)
  */
 public class NewLibMS
 {
@@ -52,5 +52,16 @@ public class NewLibMS
             loan.display();
             loanDB.save(loan);
         }      
+    }
+    
+    /**
+     * 새 책을 등록하는 메소드
+     *
+     * @param  bookID(등록번호), title(제목), author(작가)
+     * 
+     */
+    public void registerNewBook(String bookID, String title, String author)
+    {
+
     }
 }

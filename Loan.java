@@ -3,7 +3,7 @@
  * 대출 객체를 생성하는 클래스
  *
  * @author (2025320070 복창희)
- * @version (2026.11.02)
+ * @version (2026.11.03)
  */
 public class Loan
 {
